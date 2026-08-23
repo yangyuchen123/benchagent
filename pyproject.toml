@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "benchagent"
+version = "0.1.0"
+description = "Autonomous benchmark construction agent, implemented from the BenchmarkAgent paper (arXiv:2606.06462)"
+requires-python = ">=3.11"
+dependencies = [
+    "litellm>=1.40.0",
+    "pydantic>=2.0",
+    "PyYAML>=6.0",
+    "python-dotenv>=1.0",
+    "tenacity>=8.0",
+    "Pillow>=10.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+audio = ["pydub>=0.25", "soundfile>=0.12"]
+hf = ["datasets>=2.19"]
+
+[project.scripts]
+benchagent = "benchagent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["benchagent*"]

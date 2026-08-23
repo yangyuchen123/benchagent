@@ -1,0 +1,117 @@
+[
+  {
+    "event": "City bridge closure",
+    "reports": [
+      {
+        "source": "City Official Statement",
+        "headline": "Downtown Bridge to Close for Safety Inspections",
+        "body": "The city announced today that the Riverside Bridge will be closed to all traffic starting Monday for a comprehensive structural safety inspection. Officials said the closure is precautionary and expected to last two weeks. 'There is no immediate danger,' said city engineer Maria Lopez. 'We are simply being thorough.'",
+        "perspective": "official"
+      },
+      {
+        "source": "Local News",
+        "headline": "Commuters Face Long Detours as Bridge Shuts Monday",
+        "body": "Thousands of daily commuters will need to find alternative routes starting Monday when the Riverside Bridge closes for what the city calls a routine inspection. Local businesses near the bridge worry about lost customers. 'This will hurt,' said cafe owner Tom Reed. 'A two-week closure might as well be a year for us.'",
+        "perspective": "commuters/business"
+      },
+      {
+        "source": "Eyewitness Interview",
+        "headline": "Driver Claims Cracks Were Visible Before Closure",
+        "body": "A regular bridge user says he noticed visible cracks in the bridge supports last month. 'I saw them myself, hairline cracks near the south tower,' said Ahmed Hassan, who crosses the bridge daily. City engineers did not confirm or deny the claim, saying only that inspections follow standard procedure.",
+        "perspective": "eyewitness"
+      }
+    ]
+  },
+  {
+    "event": "Tech company product recall",
+    "reports": [
+      {
+        "source": "Company Press Release",
+        "headline": "VoltEdge Voluntarily Recalls 50,000 Power Banks",
+        "body": "VoltEdge announced a voluntary recall of its PowerPlus 10K power banks after a small number of units overheated during charging. The company says no injuries were reported and the recall is purely precautionary. Customers can receive a free replacement or full refund.",
+        "perspective": "company"
+      },
+      {
+        "source": "Consumer Safety Group",
+        "headline": "VoltEdge Recall Follows Three Overheating Incidents",
+        "body": "Consumer Watch reports that at least three separate overheating incidents involving VoltEdge PowerPlus 10K units were logged with the national safety database in the past month, two of them involving visible smoke. The group says the recall covers fewer units than it believes may be affected.",
+        "perspective": "consumer advocate"
+      },
+      {
+        "source": "Tech Blog",
+        "headline": "VoltEdge Recall: What We Know So Far",
+        "body": "VoltEdge's recall of the PowerPlus 10K is the company's first since 2021. Analysts note the recall comes just before the holiday shopping season and estimate the cost to the company at several million dollars. VoltEdge shares fell 4% in early trading.",
+        "perspective": "analyst"
+      }
+    ]
+  },
+  {
+    "event": "Library opening delayed",
+    "reports": [
+      {
+        "source": "Library Board Announcement",
+        "headline": "Central Library Grand Opening Moved to Spring",
+        "body": "The Central Library Board announced that the grand opening of the new Central Library will be delayed from January to April due to finishing work on the reading halls. Board chair Elaine Park said the delay 'ensures we open fully ready.'",
+        "perspective": "board"
+      },
+      {
+        "source": "Construction Union",
+        "headline": "Library Delay Blamed on Material Shortages",
+        "body": "The construction union representing workers on the Central Library project says the real reason for the delay is a shortage of specialized acoustic panels, not 'finishing work' as the board claims. Workers have been reassigned to other sites for now.",
+        "perspective": "workers"
+      },
+      {
+        "source": "City Council Member",
+        "headline": "Council Questions Library Timeline Again",
+        "body": "A city council member who has long questioned the library project's timeline said the new April date 'does not inspire confidence' and asked for a third-party audit of the project schedule and budget.",
+        "perspective": "oversight"
+      }
+    ]
+  },
+  {
+    "event": "Local park renovation vote",
+    "reports": [
+      {
+        "source": "Parks Department",
+        "headline": "Park Renovation Plan Approved After Public Input",
+        "body": "The Parks Department approved a $2M renovation of Oak Park after a public input period that drew 400 comments. The plan adds a new playground, resurfaced paths, and 30 additional trees.",
+        "perspective": "department"
+      },
+      {
+        "source": "Neighborhood Association",
+        "headline": "Residents Split on Park Plan They Say Ignores Dog Owners",
+        "body": "The Oak Park neighborhood association says the approved plan dropped a promised dog park despite strong support in the comment period. 'The comments were 60% in favor of a dog area,' said association president Diane Wu. 'Where did that go?'",
+        "perspective": "residents"
+      },
+      {
+        "source": "Environmental Group",
+        "headline": "Group Questions Tree Count in Park Plan",
+        "body": "GreenRoots, a local environmental group, says the '30 additional trees' in the plan is misleading because 12 mature trees will be removed for the new playground, a net gain of only 18.",
+        "perspective": "environmental"
+      }
+    ]
+  },
+  {
+    "event": "Airline baggage policy change",
+    "reports": [
+      {
+        "source": "Airline Announcement",
+        "headline": "SkyPath Updates Baggage Allowance to Streamline Boarding",
+        "body": "SkyPath Airlines announced a revised carry-on policy effective next month: one personal item plus one carry-on bag for all fare classes. The airline says the change will speed up boarding and reduce gate delays.",
+        "perspective": "airline"
+      },
+      {
+        "source": "Passenger Forum",
+        "headline": "SkyPath Baggage Change Means New Fees for Many",
+        "body": "Frequent flyers report that while the airline calls it an 'update', economy basic fares now include only a personal item, with carry-on bags subject to a fee at check-in. 'Same bag, new charge,' wrote one traveler.",
+        "perspective": "passengers"
+      },
+      {
+        "source": "Industry Analyst",
+        "headline": "SkyPath Follows Industry Trend on Baggage Fees",
+        "body": "Analysts note SkyPath's change aligns with a broader industry shift toward unbundled fares. The airline expects the policy to increase ancillary revenue by an estimated $40M annually.",
+        "perspective": "industry"
+      }
+    ]
+  }
+]

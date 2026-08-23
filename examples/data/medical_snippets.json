@@ -1,0 +1,38 @@
+[
+  {
+    "case": "A 62-year-old man with hypertension and hyperlipidemia presents with sudden vertigo, diplopia, slurred speech, and difficulty walking. He becomes progressively drowsy. Exam shows dysarthria, bilateral limb ataxia, and impaired horizontal eye movements.",
+    "clinical_question": "Which artery is the most likely origin of the embolus?",
+    "diagnosis": "Distal basilar artery",
+    "reasoning": "Brainstem involvement together with progressive drowsiness is characteristic of top-of-the-basilar (distal basilar) syndrome."
+  },
+  {
+    "case": "A 45-year-old woman reports three weeks of progressive exertional dyspnea and dry cough. Chest X-ray shows bilateral hilar lymphadenopathy. Serum ACE is elevated.",
+    "clinical_question": "What is the most likely diagnosis?",
+    "diagnosis": "Sarcoidosis",
+    "reasoning": "Bilateral hilar lymphadenopathy with elevated ACE and dry cough is classic for sarcoidosis."
+  },
+  {
+    "case": "A 58-year-old man with a history of diabetes presents with painless right eye vision loss over 2 days. Fundoscopy reveals new vessel growth on the optic disc.",
+    "clinical_question": "What is the most likely diagnosis?",
+    "diagnosis": "Proliferative diabetic retinopathy",
+    "reasoning": "Painless vision loss with neovascularization on the disc in a diabetic patient indicates proliferative diabetic retinopathy."
+  },
+  {
+    "case": "A 70-year-old woman with atrial fibrillation not on anticoagulation presents with sudden left-sided weakness and aphasia. CT head is normal. Symptoms began 90 minutes ago.",
+    "clinical_question": "What is the most appropriate next imaging study?",
+    "diagnosis": "MRI with diffusion-weighted imaging",
+    "reasoning": "Early ischemic stroke can be normal on CT; DWI MRI is most sensitive in the hyperacute phase."
+  },
+  {
+    "case": "A 34-year-old man presents with fever, arthralgias, and a malar rash. He reports photosensitivity and oral ulcers. Urinalysis shows proteinuria and red cell casts.",
+    "clinical_question": "What is the most likely diagnosis?",
+    "diagnosis": "Systemic lupus erythematosus",
+    "reasoning": "Malar rash, photosensitivity, oral ulcers, arthralgias and renal involvement meet criteria for SLE."
+  },
+  {
+    "case": "A 50-year-old man with chronic heartburn presents with dysphagia for solids. Endoscopy shows a stricture in the distal esophagus with salmon-colored mucosa above it.",
+    "clinical_question": "What is the most likely cause of the stricture?",
+    "diagnosis": "Peptic stricture from GERD",
+    "reasoning": "Chronic reflux with Barrett's-type mucosa and distal esophageal stricture points to peptic stricture."
+  }
+]

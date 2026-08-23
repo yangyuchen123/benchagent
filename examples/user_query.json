@@ -1,0 +1,5 @@
+{
+  "id": "multi_perspective_reasoning_demo",
+  "description": "Build a benchmark that evaluates whether a model can integrate multiple narrative accounts of the same underlying event, reconcile differing perspectives, and answer questions about what actually happened. The model must combine information scattered across accounts rather than relying on any single report.",
+  "target_size": 8
+}

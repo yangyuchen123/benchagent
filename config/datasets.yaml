@@ -1,0 +1,64 @@
+# Dataset pool configuration — one entry per candidate dataset.
+# Each entry: {card: <DatasetCard fields>, data: <loader config>}
+datasets:
+  - card:
+      dataset_id: "news_events"
+      name: "News Event Reports"
+      modalities: ["text"]
+      io_schemas: [{"in_": ["text"], "out": ["text"]}]
+      size_samples: 5
+      description: "Multiple news reports of the same underlying event, from different outlets with different perspectives."
+      card_text: >-
+        Each sample contains 2-4 news reports (headline + body) of the same event
+        written from different perspectives (e.g. official statement vs. eyewitness
+        account). Reports may differ in emphasis and detail but describe one shared
+        underlying event. Suitable for multi-perspective integration, bias
+        assessment, and event reconstruction tasks.
+      tasks: ["event_reasoning", "multi_perspective", "reading_comprehension"]
+      domain: "news/current events"
+    data:
+      loader: "json"
+      path: "news_events.json"
+
+  - card:
+      dataset_id: "medical_snippets"
+      name: "Medical Case Snippets"
+      modalities: ["text"]
+      io_schemas: [{"in_": ["text"], "out": ["text"]}]
+      size_samples: 6
+      description: "Short medical case descriptions with a clinical question and a correct diagnosis."
+      card_text: >-
+        Each sample is a short clinical vignette: patient presentation, history,
+        and findings, followed by a question with a single correct diagnosis.
+        Suitable for structured reasoning, differential-diagnosis and
+        domain-specific QA tasks.
+      tasks: ["clinical_reasoning", "question_answering"]
+      domain: "medicine"
+    data:
+      loader: "json"
+      path: "medical_snippets.json"
+
+  - card:
+      dataset_id: "code_refactoring"
+      name: "Code Abstraction & Structure Preservation Scenarios"
+      modalities: ["text"]
+      io_schemas: [{"in_": ["text"], "out": ["text"]}]
+      size_samples: 4
+      description: "Well-structured codebases (interface layer / implementation layer / business facade / caller) each with a concrete change request."
+      card_text: >-
+        Each sample contains a small, deliberately well-structured codebase (clear
+        abstraction layers: contracts/interfaces, implementations, business
+        facade, callers; plus clear block/module organization) and a concrete
+        change request. The codebase respects layering, encapsulation and block
+        boundaries, and the requested change CAN be implemented without breaking
+        the abstraction. Suitable for evaluating whether a model/agent, when
+        asked to modify code, preserves the original abstraction layers
+        (interfaces, separation of concerns) and the overall logical/block
+        structure, i.e. change-request reasoning where good answers keep the
+        architecture intact and bad answers leak implementation details, alter
+        interface contracts, or scramble the module layout.
+      tasks: ["code_modification", "architecture_preservation", "refactoring_judgment"]
+      domain: "software engineering"
+    data:
+      loader: "json"
+      path: "code_refactoring.json"

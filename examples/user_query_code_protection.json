@@ -1,0 +1,5 @@
+{
+  "id": "code_abstraction_protection",
+  "description": "Build a benchmark that evaluates whether an agent, when asked to modify existing code, respects the original abstraction layers of the codebase (interfaces/contracts, separation of concerns, encapsulation, layering) and preserves the overall logical structure and block/module organization. A good modification satisfies the change request without: (1) altering interface contracts, (2) leaking implementation details across layers, (3) duplicating or inlining helper logic that belongs in its own block, (4) scattering new code across unrelated sections, or (5) rearranging the codebase's structural boundaries. The benchmark must test both recognition (identify which proposed modification preserves the architecture) and judgment (choose the change that is faithful to the abstraction) across realistic refactoring scenarios.",
+  "target_size": 8
+}

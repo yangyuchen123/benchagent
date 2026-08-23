@@ -1,0 +1,17 @@
+# LLM configuration — model selection only.
+# API key / base URL / provider live in .env (see .env.example); never put secrets here.
+#
+# Model priority: CLI --model > env LLM_MODEL / LLM_MODEL_<ROLE> > this file.
+# Default model below is an OpenRouter model id (stealth/ox-alpha);
+# it works when .env has LLM_PROVIDER=openrouter + OPENROUTER_API_KEY.
+
+agents:
+  default: "stealth/ox-alpha"
+  design: "stealth/ox-alpha"
+  grounding: "stealth/ox-alpha"
+  allocation: "stealth/ox-alpha"
+  executor: "stealth/ox-alpha"
+  verify: "stealth/ox-alpha"
+
+tools:
+  default: "stealth/ox-alpha"
