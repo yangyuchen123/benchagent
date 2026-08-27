@@ -1,0 +1,6 @@
+{
+  "id": "instruction-following-constraint-satisfaction-001",
+  "env_name": "generated-constraint-following-fixture-v1-no-mcp",
+  "prompt": "Read materials/constraint_task.json and produce exactly one final artifact at artifacts/final_output.json. Preserve the task intent while satisfying explicit positive and negative constraints, implicit requirements, and the stated precedence rules: higher-priority instructions override lower-priority conflicts; reject irrelevant distractors; apply valid late-injected constraints unless they conflict with a higher-priority constraint. If a material ambiguity blocks safe completion, use the fixture's schema-valid clarification/safe-degradation form rather than inventing facts. Do not create alternative deliverables or unrequested fields. Before finishing, check artifacts/final_output.json against schemas/final_output.schema.json using the capabilities already available to you. The canonical final artifact schema is schemas/final_output.schema.json. A normal artifact has top-level cases, with each case containing only case_id and response; the alternative has top-level clarification and optional safe_degradation.",
+  "timeout_seconds": 600
+}

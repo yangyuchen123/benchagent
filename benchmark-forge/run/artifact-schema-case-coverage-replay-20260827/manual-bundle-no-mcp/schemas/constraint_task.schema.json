@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://instruction-following-constraint-task-fixture/v1",
+  "title": "InstructionFollowingConstraintTaskFixture",
+  "type": "object",
+  "required": ["fixture_id", "instruction", "cases"],
+  "properties": {
+    "fixture_id": {"type": "string", "minLength": 1},
+    "instruction": {"type": "string", "minLength": 1},
+    "cases": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["case_id", "tag", "request", "constraints"],
+        "properties": {
+          "case_id": {"type": "string", "minLength": 1},
+          "tag": {"type": "string", "enum": ["explicit_positive", "explicit_negative", "implicit_intent", "conflict", "distractor", "late_injection"]},
+          "request": {"type": "string", "minLength": 1},
+          "constraints": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["priority", "type", "value"], "properties": {"priority": {"type": "integer"}, "type": {"type": "string", "minLength": 1}, "value": {}}, "additionalProperties": false}},
+          "precedence": {"type": "string"},
+          "late_injection": {"type": "object", "required": ["valid", "priority", "instruction"], "properties": {"valid": {"type": "boolean"}, "priority": {"type": "integer"}, "instruction": {"type": "string", "minLength": 1}}, "additionalProperties": false}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

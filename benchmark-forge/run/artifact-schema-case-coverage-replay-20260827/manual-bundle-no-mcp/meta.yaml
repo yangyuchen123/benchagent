@@ -1,0 +1,124 @@
+name: generated-constraint-following-fixture-v1-no-mcp
+schema_version: '1.0'
+type: local
+category: agent-system
+test_focus: 'Read materials/constraint_task.json and produce exactly one final artifact
+  at artifacts/final_output.json. Preserve the task intent while satisfying explicit
+  positive and negative constraints, implicit requirements, and the stated precedence
+  rules: higher-priority instructions override lower-priorit'
+description: Manual no-MCP repair of the generated constraint-following environment;
+  artifact validation is performed offline by the scorer.
+pass_threshold: 70.0
+prerequisites:
+  summary: No public internet, third-party service, or benchmark-provided MCP tool
+    is required.
+  on_missing: not applicable
+  requires: []
+task_id: instruction-following-constraint-satisfaction-001
+protocol: octagon.env.v1
+tools: []
+artifacts:
+- artifact_id: final_output
+  path: artifacts/final_output.json
+  media_type: application/json
+  description: The single required schema-valid structured deliverable or schema-valid
+    clarification/safe-degradation response.
+  required: true
+  schema_path: schemas/final_output.schema.json
+  schema_def:
+    $schema: https://json-schema.org/draft/2020-12/schema
+    title: ConstraintTaskFinalOutput
+    oneOf:
+    - type: object
+      required:
+      - cases
+      properties:
+        cases:
+          type: array
+          minItems: 6
+          items:
+            type: object
+            required:
+            - case_id
+            - response
+            properties:
+              case_id:
+                type: string
+                minLength: 1
+              response: {}
+            additionalProperties: false
+      additionalProperties: false
+    - type: object
+      required:
+      - clarification
+      properties:
+        clarification:
+          type: string
+          minLength: 1
+        safe_degradation:
+          type: string
+          minLength: 1
+      additionalProperties: false
+  producer: agent_workspace
+  authority: workspace_artifact
+  must_exist_before: null
+materials:
+  agent:
+  - path: materials/constraint_task.json
+    target: materials/constraint_task.json
+  - path: schemas/final_output.schema.json
+    target: schemas/final_output.schema.json
+  - path: schemas/constraint_task.schema.json
+    target: schemas/constraint_task.schema.json
+material_contracts:
+- material_id: constraint-task-fixture
+  source_type: generated
+  source_ref: generated://instruction-following/constraint-task-fixture/v1
+  target: materials/constraint_task.json
+  read_only: true
+  required: true
+  visibility: agent
+  schema_ref: schema://instruction-following-constraint-task-fixture/v1
+  minimum_items: 6
+  collection_key: cases
+runtime_abi: agent-octagon.env-loader.v1
+dimensions:
+- name: constraint_satisfaction
+  weight: 50.0
+  description: Satisfaction of explicit positive, negative, implicit, precedence,
+    conflict, distractor, and applicable late-injection constraints using the submitted
+    artifact and offline verifier evidence.
+  minimum_score: 0.0
+  critical_gate: true
+  evidence_sources:
+  - agent_trajectory
+  - artifact
+  - verifier
+- name: intent_coverage
+  weight: 20.0
+  description: Coverage of the underlying intent and all required fixture cases, not
+    merely the easiest subset.
+  minimum_score: null
+  critical_gate: false
+  evidence_sources:
+  - artifact
+  - verifier
+- name: format_validity
+  weight: 20.0
+  description: Exactly one parseable final artifact follows the required schema; validation
+    is performed offline after submission.
+  minimum_score: 0.0
+  critical_gate: true
+  evidence_sources:
+  - artifact
+  - verifier
+- name: unjustified_deviation
+  weight: 10.0
+  description: Penalize fabrication, needless refusal, unrequested fields, and deviations
+    unsupported by ambiguity or precedence.
+  minimum_score: null
+  critical_gate: false
+  evidence_sources:
+  - agent_trajectory
+  - artifact
+  - verifier

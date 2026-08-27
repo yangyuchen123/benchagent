@@ -1,0 +1,24 @@
+{
+  "name": "generated-constraint-following-fixture-v1-no-mcp",
+  "tool_count": 0,
+  "mcp_server_count": 0,
+  "agent_material_targets": [
+    "materials/constraint_task.json",
+    "schemas/constraint_task.schema.json",
+    "schemas/final_output.schema.json"
+  ],
+  "scorer_loaded": true,
+  "scores_without_trace": {
+    "constraint_satisfaction": 100.0,
+    "intent_coverage": 100.0,
+    "format_validity": 100.0,
+    "unjustified_deviation": 100.0
+  },
+  "scores_with_fake_validator_trace": {
+    "constraint_satisfaction": 100.0,
+    "intent_coverage": 100.0,
+    "format_validity": 100.0,
+    "unjustified_deviation": 100.0
+  },
+  "trace_invariant": true
+}

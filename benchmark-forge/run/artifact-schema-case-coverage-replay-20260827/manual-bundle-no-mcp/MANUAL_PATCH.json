@@ -1,0 +1,21 @@
+{
+  "schema_version": "benchmark-forge.manual-bundle-patch.v1",
+  "created_on": "2026-08-27",
+  "source_bundle": "../bundle",
+  "environment_id": "generated-constraint-following-fixture-v1-no-mcp",
+  "scope": "bundle_only",
+  "system_changed": false,
+  "knowledge_base_changed": false,
+  "reason": "Remove a benchmark-provided MCP validator that was introduced only as an output-JSON self-check and was not intrinsic to the evaluated capability.",
+  "changes": [
+    "removed entrypoints.mcp",
+    "removed benchmark_environment validate_output declaration",
+    "removed mcp_server.py",
+    "replaced core.py with a zero-tool runtime marker",
+    "removed mandatory validate_output call from the public task",
+    "made format_validity depend on offline artifact schema validation",
+    "kept constraint semantics and precedence scoring unchanged"
+  ],
+  "frozen_ir_alignment": "intentional_manual_derivative; not written back to the original Contract or Frozen IR",
+  "promotion": "requires explicit later design decision before incorporation into Benchmark Forge or the knowledge base"
+}

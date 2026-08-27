@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "benchmark-forge"
+version = "0.1.0"
+description = "Agentic benchmark generation around a typed Benchmark state"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7",
+  "pydantic-ai-slim[openai]>=2.0,<3",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+benchmark-forge = "benchmark_forge.cli:main"
+benchmark-forge-ab = "benchmark_forge.experiment_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
